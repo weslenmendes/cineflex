@@ -1,10 +1,14 @@
+import { Link } from "react-router-dom";
+
 import "./style.scss";
 
-const Card = ({ title, posterURL, overview, releaseDate, onClick }) => {
+const Card = ({ id, title, posterURL }) => {
   return (
-    <article className="card" onClick={onClick}>
-      <img src={posterURL} alt={title} />
-    </article>
+    <Link to={`/filme/${id}`}>
+      <article className="card">
+        <img src={posterURL} alt={title} />
+      </article>
+    </Link>
   );
 };
 

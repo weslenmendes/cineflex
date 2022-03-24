@@ -1,0 +1,23 @@
+.btn {
+  width: 82px;
+  height: 43px;
+  margin-right: 8px;
+  margin-bottom: 23px;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "Roboto", sans-serif;
+
+  letter-spacing: 0.02em;
+
+  border: none;
+  color: #fff;
+  background: #e8833a;
+  border-radius: 3px;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+  }
+}

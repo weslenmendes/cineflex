@@ -1,0 +1,53 @@
+.footer {
+  padding: 18px 10px;
+  background-color: #dfe6ed;
+  border-top: 1px solid #9eadba;
+  height: 117px;
+
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+
+  &.show {
+    transform: translateY(0);
+  }
+
+  .mini-card {
+    width: 64px;
+    height: 89px;
+    padding: 8px;
+
+    background: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .title,
+  .session-info {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    margin-left: 14px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    color: #293845;
+  }
+
+  .session-info {
+    margin-top: 11px;
+  }
+}
