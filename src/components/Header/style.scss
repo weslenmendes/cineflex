@@ -1,0 +1,23 @@
+.header {
+  background-color: #c3cfd9;
+  width: 100%;
+  min-height: 67px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  h1 {
+    font-size: 34px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 20px 0px;
+    margin: 0 auto;
+    color: #e8833a;
+  }
+}

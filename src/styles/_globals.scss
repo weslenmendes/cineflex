@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: $font-roboto;
+  background-color: $bg-primary-color;
+
+  iframe {
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 980px;
+    width: 100%;
+    padding: 0 5px;
+    margin: 0 auto;
+    margin-top: 75px;
+  }
+}

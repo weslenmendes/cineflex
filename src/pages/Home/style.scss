@@ -1,0 +1,22 @@
+.home {
+  padding-bottom: 40px;
+  width: 100%;
+
+  header {
+    width: 100%;
+    padding: 45px 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: #293845;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
