@@ -19,19 +19,19 @@ const initialState = {
 const Session = () => {
   const [data, setData] = useState([]);
   const [form, setForm] = useState(initialState);
-  const { sessionId } = useParams();
+  const { idSessao } = useParams();
 
   useEffect(() => {
     (async function () {
       try {
-        const { data } = await api.get(`showtimes/${sessionId}/seats`);
+        const { data } = await api.get(`showtimes/${idSessao}/seats`);
         setData({ ...data });
         window.scrollTo({ top: 0, behavior: "smooth" });
       } catch (e) {
         alert(e);
       }
     })();
-  }, [sessionId]);
+  }, [idSessao]);
 
   return (
     <section className="session">

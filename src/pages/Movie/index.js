@@ -13,16 +13,16 @@ import "./style.scss";
 const Movie = () => {
   const [data, setData] = useState({});
   const [showMovieSection, setShowMovieSection] = useState(false);
-  const { id } = useParams();
+  const { idFilme } = useParams();
 
   useEffect(() => {
     (async function () {
-      const { data } = await api.get(`movies/${id}/showtimes`);
+      const { data } = await api.get(`movies/${idFilme}/showtimes`);
       setData({ ...data });
       window.scrollTo({ top: 0, behavior: "smooth" });
       setShowMovieSection(true);
     })();
-  }, [id]);
+  }, [idFilme]);
 
   const makeContent = () => {
     const { days } = data;
@@ -40,11 +40,11 @@ const Movie = () => {
               </p>
             </div>
             <main className="showtimes">
-              {showtimes?.map(({ name, id: sessionId }) => (
+              {showtimes?.map(({ name, id: idSessao }) => (
                 <Button
-                  key={sessionId}
+                  key={idSessao}
                   content={name}
-                  pathname={`/filme/${id}/sessao/${sessionId}`}
+                  pathname={`assentos/${idSessao}`}
                 />
               ))}
             </main>

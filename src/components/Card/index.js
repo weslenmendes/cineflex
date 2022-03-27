@@ -4,7 +4,7 @@ import "./style.scss";
 
 const Card = ({ id, title, posterURL }) => {
   return (
-    <Link to={`/filme/${id}`}>
+    <Link to={`/sessoes/${id}`}>
       <article className="card">
         <img src={posterURL} alt={title} />
       </article>

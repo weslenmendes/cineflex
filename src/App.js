@@ -15,8 +15,11 @@ const App = () => {
       <main className="container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/filme/:id" element={<Movie />} />
-          <Route path="/filme/:id/sessao/:sessionId" element={<Session />} />
+          <Route path="sessoes/:idFilme" element={<Movie />} />
+          <Route
+            path="sessoes/:idFilme/assentos/:idSessao"
+            element={<Session />}
+          />
         </Routes>
       </main>
     </BrowserRouter>
