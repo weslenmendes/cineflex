@@ -17,7 +17,7 @@ const Movie = () => {
 
   useEffect(() => {
     (async function () {
-      const { data } = await api.get(`/${id}/showtimes`);
+      const { data } = await api.get(`movies/${id}/showtimes`);
       setData({ ...data });
       window.scrollTo({ top: 0, behavior: "smooth" });
       setShowMovieSection(true);

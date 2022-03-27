@@ -1,0 +1,36 @@
+.seats {
+  max-width: 980px;
+  width: 100%;
+  margin-left: 20px;
+  padding-right: 14px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  .seat {
+    height: 26px;
+    width: 26px;
+    margin-right: 7px;
+    margin-bottom: 11px;
+    background-color: #c3cfd9;
+    border: 1px solid #808f9d;
+    border-radius: 50%;
+    font-size: 11px;
+    cursor: pointer;
+    user-select: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.selected {
+      background-color: #8dd7cf;
+      border-color: #1aae9e;
+    }
+    &.unavailable {
+      background-color: #fbe192;
+      border-color: #f7c52b;
+      cursor: not-allowed;
+    }
+  }
+}

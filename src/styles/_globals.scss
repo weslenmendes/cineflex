@@ -12,6 +12,11 @@ body {
     pointer-events: none;
   }
 
+  .root {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
   .container {
     max-width: 980px;
     width: 100%;

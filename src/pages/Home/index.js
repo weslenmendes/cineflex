@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     (async function () {
-      const { data } = await api.get();
+      const { data } = await api.get("/movies");
       setCards([...data]);
       window.scrollTo({ top: 0, behavior: "smooth" });
       setShowCards(true);
