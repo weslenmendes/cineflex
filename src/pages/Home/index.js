@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { Card } from "../../components/Card";
+import { Loading } from "../../components/Loading";
 
 import { api } from "../../services/api";
 
@@ -25,11 +26,15 @@ const Home = () => {
         <p>Selecione o filme</p>
       </header>
 
-      <section className={showCards ? "cards show" : "cards"}>
-        {cards.map(({ id, title, posterURL }) => (
-          <Card key={id} id={id} title={title} posterURL={posterURL} />
-        ))}
-      </section>
+      {cards ? (
+        <section className={showCards ? "cards show" : "cards"}>
+          {cards.map(({ id, title, posterURL }) => (
+            <Card key={id} id={id} title={title} posterURL={posterURL} />
+          ))}
+        </section>
+      ) : (
+        <Loading />
+      )}
     </section>
   );
 };
