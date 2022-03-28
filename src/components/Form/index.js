@@ -8,20 +8,25 @@ const initialState = {
   ids: [],
   name: "",
   cpf: "",
+  seats: [],
 };
 
-const Form = ({ form, setForm }) => {
+const Form = ({ form, setForm, onSuccess }) => {
+  let conditionToSendForm =
+    form.cpf.length < 14 || form.name.length < 1 || form.seats.length < 1;
+
   const handleForm = (e) => {
     e.preventDefault();
 
     const API_URL = "seats/book-many";
-    const sendData = { ...form };
+    const sendData = { ids: form.ids, name: form.name, cpf: form.cpf };
 
     const promise = api.post(API_URL, sendData);
 
     promise
       .then((res) => {
         setForm(initialState);
+        onSuccess("/sucesso");
       })
       .catch((e) => console.log(e));
   };
@@ -68,7 +73,9 @@ const Form = ({ form, setForm }) => {
         </div>
 
         <div>
-          <button className="btn">Reservar assento(s)</button>
+          <button disabled={conditionToSendForm} className="btn">
+            Reservar assento(s)
+          </button>
         </div>
       </form>
     </section>

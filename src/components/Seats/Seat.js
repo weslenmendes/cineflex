@@ -1,4 +1,12 @@
-const Seat = ({ ids, id, isAvailable, name, handleSelect }) => {
+const Seat = ({ ids, id, isAvailable, name, handleSelect, seats }) => {
+  const handleClick = (className) => {
+    if (className.includes("unavailable")) {
+      alert("Esse assento não está disponível");
+    } else {
+      handleSelect(id, isAvailable, name, seats);
+    }
+  };
+
   let isSelected = ids.includes(id) && isAvailable;
   let className = "";
 
@@ -14,7 +22,7 @@ const Seat = ({ ids, id, isAvailable, name, handleSelect }) => {
     <div
       key={name}
       className={className}
-      onClick={() => handleSelect(id, isAvailable)}
+      onClick={() => handleClick(className)}
     >
       {name}
     </div>

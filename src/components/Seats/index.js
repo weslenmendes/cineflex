@@ -5,21 +5,28 @@ import { Seat } from "./Seat";
 const Seats = ({ data, form, setForm }) => {
   const makeSeats = () => {
     if (data) {
-      const { seats } = data;
+      const { seats: seatsData } = data;
       const { ids } = form;
 
-      const handleSelect = (id, isAvailable) => {
+      const compareNumbers = (a, b) => a - b;
+
+      const handleSelect = (id, isAvailable, name, seats) => {
         if (isAvailable && !ids.includes(id)) {
-          setForm({ ...form, ids: [...ids, id] });
+          setForm({
+            ...form,
+            ids: [...ids, +id],
+            seats: [...seats, +name].sort(compareNumbers),
+          });
         } else if (isAvailable && ids.includes(id)) {
           const newArrIds = ids.filter((el) => el !== id);
-          setForm({ ...form, ids: newArrIds });
+          const newArrSeats = seats?.filter((el) => el !== +name);
+          setForm({ ...form, ids: newArrIds, seats: newArrSeats });
         }
 
         return;
       };
 
-      return seats?.map(({ id, isAvailable, name }) => (
+      return seatsData?.map(({ id, isAvailable, name }) => (
         <Seat
           key={id}
           id={id}
@@ -27,6 +34,7 @@ const Seats = ({ data, form, setForm }) => {
           isAvailable={isAvailable}
           ids={ids}
           handleSelect={handleSelect}
+          seats={form.seats}
         />
       ));
     }

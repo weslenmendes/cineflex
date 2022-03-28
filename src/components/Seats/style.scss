@@ -1,8 +1,8 @@
 .seats {
   max-width: 980px;
   width: 100%;
-  margin-left: 20px;
-  padding-right: 14px;
+  padding-left: 20px;
+  padding-right: 0px;
 
   display: flex;
   flex-wrap: wrap;
@@ -30,7 +30,6 @@
     &.unavailable {
       background-color: #fbe192;
       border-color: #f7c52b;
-      cursor: not-allowed;
     }
   }
 }

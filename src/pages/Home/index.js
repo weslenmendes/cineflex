@@ -26,14 +26,16 @@ const Home = () => {
         <p>Selecione o filme</p>
       </header>
 
-      {cards ? (
-        <section className={showCards ? "cards show" : "cards"}>
+      {cards.length === 0 ? (
+        <Loading />
+      ) : (
+        <section
+          className={cards.length > 0 && showCards ? "cards show" : "cards"}
+        >
           {cards.map(({ id, title, posterURL }) => (
             <Card key={id} id={id} title={title} posterURL={posterURL} />
           ))}
         </section>
-      ) : (
-        <Loading />
       )}
     </section>
   );

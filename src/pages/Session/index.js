@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import { Footer } from "../../components/Footer";
 import { Form } from "../../components/Form";
@@ -14,12 +14,15 @@ const initialState = {
   ids: [],
   name: "",
   cpf: "",
+  seats: [],
 };
 
 const Session = () => {
   const [data, setData] = useState([]);
   const [form, setForm] = useState(initialState);
   const { idSessao } = useParams();
+  const navigate = useNavigate();
+  console.log(form);
 
   useEffect(() => {
     (async function () {
@@ -33,15 +36,36 @@ const Session = () => {
     })();
   }, [idSessao]);
 
+  const handleNavigate = (pathname) => {
+    const send = {
+      movie: {
+        title: data.movie.title,
+        weekday: data.day.weekday,
+        time: data.name,
+      },
+      seats: form.seats,
+      buyer: { name: form.name, cpf: form.cpf },
+    };
+
+    navigate(pathname, { state: { ...send } });
+  };
+
   return (
     <section className="session">
       <header>
         <h1>Selecione o(s) assento(s)</h1>
       </header>
-      {data ? (
+      {data.length === 0 ? (
+        <Loading />
+      ) : (
         <React.Fragment>
-          <Seats data={data} form={form} setForm={setForm} />
-          <div className="legend">
+          <Seats
+            data={data}
+            form={form}
+            setForm={setForm}
+            seats={form?.seats}
+          />
+          <section className="legend">
             <div>
               <div className="seat selected"></div>
               <p>Selecionado</p>
@@ -56,8 +80,8 @@ const Session = () => {
               <div className="seat unavailable"></div>
               <p>Indisponível</p>
             </div>
-          </div>
-          <Form form={form} setForm={setForm} />
+          </section>
+          <Form form={form} setForm={setForm} onSuccess={handleNavigate} />
 
           {data.movie && (
             <Footer
@@ -68,8 +92,6 @@ const Session = () => {
             />
           )}
         </React.Fragment>
-      ) : (
-        <Loading />
       )}
     </section>
   );
