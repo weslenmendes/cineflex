@@ -5,7 +5,7 @@
 
 Essa aplicação é uma Single-Page Application (SPA) para um cinema, onde o usuário pode escolher o filme, escolher a sessão e reservar seu local para assitir um filme.
 
-Este aplicativo foi criado usando [Create React App](https://github.com/facebook/create-react-app).
+Essa aplicação foi criada usando [Create React App](https://github.com/facebook/create-react-app).
 
 ## Requisitos
 
