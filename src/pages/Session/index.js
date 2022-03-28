@@ -22,7 +22,6 @@ const Session = () => {
   const [form, setForm] = useState(initialState);
   const { idSessao } = useParams();
   const navigate = useNavigate();
-  console.log(form);
 
   useEffect(() => {
     (async function () {
