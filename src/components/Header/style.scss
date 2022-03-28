@@ -2,6 +2,7 @@
   background-color: #c3cfd9;
   width: 100%;
   min-height: 67px;
+  position: relative;
 
   display: flex;
   align-items: center;
@@ -20,5 +21,12 @@
     margin: 0 auto;
     color: #e8833a;
     cursor: pointer;
+  }
+
+  .back-button {
+    width: 45px;
+    position: absolute;
+    left: 10px;
+    filter: drop-shadow(rgba(100, 100, 111, 0.2) 0px 7px 29px 0px);
   }
 }
