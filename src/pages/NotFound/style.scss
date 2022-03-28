@@ -1,12 +1,16 @@
 .not-found {
   width: 100%;
-  height: calc(100vh - 120px);
-  padding-top: 50px;
+  height: calc(100vh - 130px);
   color: #293845;
+  overflow-y: auto;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  img {
+    width: 290px;
+  }
 
   h2 {
     font-size: 52px;
@@ -15,5 +19,7 @@
   p {
     margin-top: 10px;
     font-size: 26px;
+    width: 290px;
+    text-align: center;
   }
 }
