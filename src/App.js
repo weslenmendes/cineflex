@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { Movie } from "./pages/Movie";
 import { Session } from "./pages/Session";
 import { Success } from "./pages/Success";
+import { NotFound } from "./pages/NotFound";
 
 import { Header } from "./components/Header";
 
@@ -22,6 +23,7 @@ const App = () => {
           <Route path={sessionPathname} element={<Movie />} />
           <Route path={seatsPathname} element={<Session />} />
           <Route path="sucesso" element={<Success />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </BrowserRouter>

@@ -1,0 +1,19 @@
+.not-found {
+  width: 100%;
+  height: calc(100vh - 120px);
+  padding-top: 50px;
+  color: #293845;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: 52px;
+  }
+
+  p {
+    margin-top: 10px;
+    font-size: 26px;
+  }
+}
