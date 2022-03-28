@@ -16,6 +16,7 @@ const Header = () => {
         <Logo
           className="back-button"
           fill="#e8833a"
+          title="Voltar"
           onClick={() => navigate(-1)}
         />
       )}
