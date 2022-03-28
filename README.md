@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src="./public/favicon.svg" width="75px" alt="">
+  <h1>Cineflex</h1>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Essa aplicação é uma Single-Page Application (SPA) para um cinema, onde o usuário pode escolher o filme, escolher a sessão e reservar seu local para assitir um filme.
 
-## Available Scripts
+Este aplicativo foi criado usando [Create React App](https://github.com/facebook/create-react-app).
 
-In the project directory, you can run:
+## Requisitos
 
-### `npm start`
+- [x] Deve ter um layout para dispositivos mobile;
+- [x] Deve exibir todos os filmes disponíveis na página inicial;
+- [x] Deve redirecionar o usuário para a página de sessões do filme, ao clicar sobre o banner do filme;
+- [x] Deve redirecionar o usuário para a página de escolha de assentos, ao clicar sobre o horário da sessão;
+- [x] Deve ter a opção de selecionar/deselecionar um assento;
+- [x] Deve disparar um alerta para o usuário, se o mesmo selecionar um assento não disponível;
+- [x] Deve ter input para nome e cpf do usuário, ao finalizar o mesmo deve ser redirecionado para uma página de sucesso com as informações sobre filme, sessão e assentos selecionados, nome e cpf do usuário;
+- [x] Deve ter um botão na página de sucesso, para redirecionar o usuário para página inicial;
+- [x] Deve ter um footer com informações do filme, como nome e sessão;
+- [x] Deve redirecionar o usuário para página inicial ao clicar sobre título do header.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tecnologias Usadas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- HTML5
+- SASS
+- JavaScript
+- ReactJS
+- React Router Dom V.6
 
-### `npm test`
+## Executando o projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Fazer o clone do projeto e entrar na pasta criada:
 
-### `npm run build`
+```bash
+git clone https://github.com/weslenmendes/cineflex.git
+cd cineflex
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Após entrar na pasta criada, executar o comando abaixo para instalar os pacotes necessários:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Se você utilizar npm
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Se você utilizar yarn
+yarn
+```
 
-### `npm run eject`
+3. Após finalizar a instalação dos pacotes, podemos executar o comando abaixo para executar o nosso projeto:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+# Se você utilizar npm
+npm start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Se você utilizar yarn
+yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Após executar o projeto, abrirá uma aba com o mesmo em seu navegador padrão.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">Feito com 💜 por <a href="https://github.com/weslenmendes">Weslen Mendes</a></p>
